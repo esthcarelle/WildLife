@@ -10,13 +10,15 @@ _This is an app to track wildlife sightings in a particular area._
 #### Description
 Tracks un-endangered animals by name.
 ## Images
+## Description
+
+
 ![](src/main/resources/public/images/Screenshot from 2019-09-25 14-38-36.png)
 ![](src/main/resources/public/images/Screenshot from 2019-09-25 14-38-53.png)
 ![](src/main/resources/public/images/Screenshot from 2019-09-25 14-39-01.png)
 ![](src/main/resources/public/images/Screenshot from 2019-09-25 14-39-07.png)
-
 ![](src/main/resources/public/images/Screenshot from 2019-09-25 14-39-44.png)
-## Description
+
 
 
 ## EndangeredAnimal Class Specifications
