@@ -14,10 +14,10 @@ Tracks un-endangered animals by name.
 
 
 ![](src/main/resources/public/images/screen1.png)
-![](src/main/resources/public/images/Screenshot from 2019-09-25 14-38-53.png)
-![](src/main/resources/public/images/Screenshot from 2019-09-25 14-39-01.png)
-![](src/main/resources/public/images/Screenshot from 2019-09-25 14-39-07.png)
-![](src/main/resources/public/images/Screenshot from 2019-09-25 14-39-44.png)
+![](src/main/resources/public/images/screen2.png)
+![](src/main/resources/public/images/screen3.png)
+![](src/main/resources/public/images/screen4.png)
+![](src/main/resources/public/images/screen5.png)
 
 
 
