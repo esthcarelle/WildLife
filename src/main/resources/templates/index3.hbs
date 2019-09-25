@@ -4,10 +4,10 @@
       <nav class="nav-bar">
         <ul>
           <ul>
-                        <li><a href="/"> Home </a></li>
-                                <li><a href="/add/new"> AddAnimal </a></li>
-                                <li><a href="/form"> PostSighting</a></li>
-                                 <li><a href="/animals"> ViewAnimals</a></li>
+                  <li><a href="/"> Home </a></li>
+                           <li><a href="/add/new"> AddAnimal </a></li>
+                            <li><a href="/form"> PostSighting</a></li>
+                             <li><a href="/animals"> ViewAnimals</a></li>
 
                    </ul>
       </nav>
@@ -55,9 +55,6 @@
 
     </style>
 
-
-
-
  {{#if endangeredAnimals}}
 
         {{#each endangeredAnimals }}
@@ -76,7 +73,7 @@
      {{#if normalAnimals}}
 
             {{#each normalAnimals }}
- <div class="well" style="text-align:center;width:30%;margin-left:30%">
+            <div class="well" style="text-align:center;width:30%;margin-left:30%">
 
 
             <p>{{ name}}</p>
@@ -88,7 +85,6 @@
          <p>No  endangered animals!</p>
         {{/if}}
         </body>
-
 
         {{/partial}}
         {{> layout.hbs}}
