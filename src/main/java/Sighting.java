@@ -8,10 +8,23 @@ public class Sighting {
     private String ranger;
     private int id;
     private Timestamp date;
-    public Sighting(int animalId,String location,String ranger) {
-        this.animalId=animalId;
-        this.location=location;
-        this.ranger=ranger;
+
+    public Sighting(int animalId, String location, String ranger) {
+        this.animalId = animalId;
+        this.location = location;
+        this.ranger = ranger;
+    }
+
+    public static Sighting find(int id) {
+        try (Connection con = DB.sql2o.open()) {
+            String sql = "SELECT * FROM sightings WHERE id=:id;";
+            Sighting sighting = con.createQuery(sql)
+                    .addParameter("id", id)
+                    .executeAndFetchFirst(Sighting.class);
+            return sighting;
+        } catch (IndexOutOfBoundsException exception) {
+            return null;
+        }
     }
 
     public Timestamp getDate() {
@@ -33,6 +46,7 @@ public class Sighting {
     public String getRanger() {
         return ranger;
     }
+
     public void save() {
         try (Connection con = DB.sql2o.open()) {
             String sql = "INSERT INTO sightings (animalId,location,ranger,date) VALUES (:animalId,:location,:ranger,now());";
@@ -45,16 +59,5 @@ public class Sighting {
                     .getKey();
         }
 
-    }
-    public static Sighting find(int id) {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "SELECT * FROM sightings WHERE id=:id;";
-            Sighting sighting = con.createQuery(sql)
-                    .addParameter("id", id)
-                    .executeAndFetchFirst(Sighting.class);
-            return sighting;
-        } catch (IndexOutOfBoundsException exception) {
-            return null;
-        }
     }
 }

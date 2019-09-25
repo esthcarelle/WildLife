@@ -43,8 +43,9 @@ public abstract class Animal {
         }
 
     }
+
     public List<Sighting> getSightings() {
-        try(Connection con = DB.sql2o.open()) {
+        try (Connection con = DB.sql2o.open()) {
             String sql = "SELECT * FROM sightings WHERE animalId = :id;";
             List<Sighting> sightings = con.createQuery(sql)
                     .addParameter("id", id)

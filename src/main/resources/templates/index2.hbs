@@ -54,37 +54,33 @@
 
       </style>
         <div class=" container">
+            <div class="row">
+                    <div class="col-md-6" >
 
+                             <div class="well" style="width:70%; opacity:0.8">
 
+                                        <h1 style="margin-bottom:4%">add sighting for an endangered animal</h1>
+                                        <form  action="/sighting/new" method="POST">
+                                          {{#if endangeredAnimals}}
+                                          <label>Select animal:</label>
+                                          <select  name="endangeredAnimalSelected">
+                                                {{#each endangeredAnimals }}
 
-      <div class="row">
-      <div class="col-md-6" >
+                                                 <option value="{{id}}">
+                                                {{ name}}</option>
+                                                {{/each}}
+                                                </select><br>
+                                            {{else}}
+                                             <p>No  endangered animals!</p>
+                                            {{/if}}
 
-      <div class="well" style="width:70%; opacity:0.8">
-
-
-<h1 style="margin-bottom:4%">add sighting for an endangered animal</h1>
-<form  action="/sighting/new" method="POST">
-  {{#if endangeredAnimals}}
-  <label>Select animal:</label>
-  <select  name="endangeredAnimalSelected">
-        {{#each endangeredAnimals }}
-
-         <option value="{{id}}">
-        {{ name}}</option>
-        {{/each}}
-        </select><br>
-    {{else}}
-     <p>No  endangered animals!</p>
-    {{/if}}
-
-    <label for="location">location</label><br>
-    <input name="location" id="location"><br>
-    <label for="ranger">ranger</label><br>
-        <input name="ranger" id="ranger"><br>
-        <button type="submit">add</button><br>
-        <br>
-        </form>
+                                            <label for="location">location</label><br>
+                                            <input name="location" id="location"><br>
+                                            <label for="ranger">ranger</label><br>
+                                                <input name="ranger" id="ranger"><br>
+                                                <button type="submit">add</button><br>
+                                                <br>
+                                                </form>
         </div>
         </div>
 
@@ -92,32 +88,31 @@
 
               <div class="well" style="width:70%; opacity:0.8">
 
+                            <form  action="/sighting/newNormal" method="POST">
+                            <h1 style="margin-bottom:4%">add sighting for a normal animal</h1>
+                                 {{#if normalAnimals}}
+                                 <label>Select animal:</label>
+                                  <select  name="normalAnimalSelected">
+                                        {{#each normalAnimals }}
+                                         <option value="{{id}}">{{ name}} </option>
+                                        {{/each}}
+                                        </select><br>
+                                    {{else}}
+                                     <p>No  normal animals!</p>
+                                    {{/if}}
 
-<form  action="/sighting/newNormal" method="POST">
-<h1 style="margin-bottom:4%">add sighting for a normal animal</h1>
-     {{#if normalAnimals}}
-     <label>Select animal:</label>
-      <select  name="normalAnimalSelected">
-            {{#each normalAnimals }}
-             <option value="{{id}}">{{ name}} </option>
-            {{/each}}
-            </select><br>
-        {{else}}
-         <p>No  normal animals!</p>
-        {{/if}}
 
-
-    <label for="location">location</label><br>
-    <input name="location" id="location"><br>
-    <label for="ranger">ranger</label><br>
-        <input name="ranger" id="ranger"><br>
-        <button type="submit">add</button><br>
-        <br>
-        </form>
-        </div>
-        </div>
-        </div>
-        </div>
+                                <label for="location">location</label><br>
+                                <input name="location" id="location"><br>
+                                <label for="ranger">ranger</label><br>
+                                    <input name="ranger" id="ranger"><br>
+                                    <button type="submit">add</button><br>
+                                    <br>
+                                     </form>
+                        </div>
+                        </div>
+                        </div>
+                        </div>
 
 
   </body>
