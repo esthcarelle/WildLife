@@ -17,6 +17,7 @@
      background-image: url(https://wallpapercave.com/wp/pLNajY7.jpg);
      background-repeat:no-repeat;
      background-size:cover;
+     font-family: 'Lobster Two', cursive;
 
       }
 
@@ -30,7 +31,7 @@
       .nav-bar{
         word-spacing: 40px;
         font-size: 20px;
-        font-family: arial;
+       font-family: 'Lobster Two', cursive;
       }
 
       .nav-bar ul li a{
@@ -65,6 +66,7 @@
 <h1 style="margin-bottom:4%">add sighting for an endangered animal</h1>
 <form  action="/sighting/new" method="POST">
   {{#if endangeredAnimals}}
+  <label>Select animal:</label>
   <select  name="endangeredAnimalSelected">
         {{#each endangeredAnimals }}
 
@@ -94,6 +96,7 @@
 <form  action="/sighting/newNormal" method="POST">
 <h1 style="margin-bottom:4%">add sighting for a normal animal</h1>
      {{#if normalAnimals}}
+     <label>Select animal:</label>
       <select  name="normalAnimalSelected">
             {{#each normalAnimals }}
              <option value="{{id}}">{{ name}} </option>
